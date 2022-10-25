@@ -28,7 +28,7 @@ dirs.forEach((name) => {
     const dir = `${BASE_DIR}/${name}`;
     doExec(name, "java", dir, "for i in {1..50} ; do java InputJ ; done", 50);
     try {
-      execSync("java InputKKt", { stdio: "ignore" });
+      execSync("java InputKKt", { cwd: dir, stdio: "ignore" });
       const cmd = "for i in {1..50} ; do java InputKKt ; done";
       doExec(name, "java", dir, cmd, 50);
     } catch (e) {

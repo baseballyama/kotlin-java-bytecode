@@ -1,0 +1,25 @@
+          iconst
+          istore
+          new                             // class java/util/ArrayList
+          dup
+          iconst
+          anewarray                      // class java/lang/Integer
+         astore
+         aload
+         iconst
+         iconst
+         invokestatic                   // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         aastore
+         aload
+         invokestatic                   // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+         checkcast                      // class java/util/Collection
+         invokespecial                  // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+         checkcast                      // class java/util/List
+         astore
+         getstatic                      // Field java/lang/System.out:Ljava/io/PrintStream;
+         iload
+         invokevirtual                  // Method java/io/PrintStream.println:(I)V
+         getstatic                      // Field java/lang/System.out:Ljava/io/PrintStream;
+         aload
+         invokevirtual                  // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+         return

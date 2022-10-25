@@ -43,12 +43,22 @@ node compile.mjs
 node performance.mjs
 ```
 
+## 文字数比較方法
+
+Kotlin の良い点の 1 個として少ない記述量で実装できる、という点があるので、この観点でも比較してみました。
+計測方法は、java / kt ファイルの文字数を数え上げるというシンプルなものです。(但し空白や改行は含まない)
+
+```sh
+node count.mjs
+```
+
 ## 参考情報
 
 - [JVM 仕様書](https://docs.oracle.com/javase/specs/jvms/se18/jvms18.pdf)
   - [インストラクションセット](https://docs.oracle.com/javase/specs/jvms/se18/html/jvms-6.html#jvms-6.5)
 - [invokedynamic の説明](https://www.oracle.com/webfolder/technetwork/jp/javamagazine/Java-ND17-MethodInvoc2.pdf)
 - src 直下のフォルダ名の末尾に `.only` を付与するとそのフォルダのみバイトコードを生成 / 性能検証することができる
+- なんか[Kotlin を Java に変換する Web サイト](https://extendsclass.com/kotlin-to-java.html)を見つけた
 
 ## 比較
 
@@ -67,6 +77,7 @@ node performance.mjs
 | --------- | ---------- | ----------- |
 | Compile   | 345.605 ms | 2462.764 ms |
 | Execution | 73.333 ms  | 65.556 ms   |
+| Count     | 71 chars   | 21 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -104,6 +115,7 @@ node performance.mjs
 | --------- | ---------- | ----------- |
 | Compile   | 347.313 ms | 2453.847 ms |
 | Execution | 33.522 ms  | 32.401 ms   |
+| Count     | 110 chars  | 101 chars   |
 
 #### Java バイトコード (抜粋)
 
@@ -194,6 +206,7 @@ InnerClasses:
 | --------- | ---------- | ----------- |
 | Compile   | 333.633 ms | 2609.760 ms |
 | Execution | 33.747 ms  | 36.040 ms   |
+| Count     | 110 chars  | 85 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -267,6 +280,7 @@ static {};
 | --------- | ---------- | ----------- |
 | Compile   | 256.064 ms | 2317.019 ms |
 | Execution | 34.310 ms  | 32.038 ms   |
+| Count     | 110 chars  | 64 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -332,6 +346,7 @@ public static void main(java.lang.String[]);
 | --------- | ---------- | ----------- |
 | Compile   | 247.636 ms | 2435.147 ms |
 | Execution | 68.138 ms  | 67.487 ms   |
+| Count     | 79 chars   | 32 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -380,6 +395,7 @@ public static void main(java.lang.String[]);
 | --------- | ---------- | ----------- |
 | Compile   | 325.292 ms | 2418.102 ms |
 | Execution | 33.619 ms  | 33.921 ms   |
+| Count     | 81 chars   | 32 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -416,6 +432,7 @@ public static void main(java.lang.String[]);
 | --------- | ---------- | ----------- |
 | Compile   | 253.020 ms | 2258.798 ms |
 | Execution | 35.264 ms  | 32.647 ms   |
+| Count     | 94 chars   | 45 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -445,7 +462,7 @@ public static void main(java.lang.String[]);
 19: return
 ```
 
-### インライン関数
+### インライン関数 (inline)
 
 #### 気づいたこと
 
@@ -459,6 +476,7 @@ public static void main(java.lang.String[]);
 | --------- | ---------- | ----------- |
 | Compile   | 397.122 ms | 2524.462 ms |
 | Execution | 39.272 ms  | 91.326 ms   |
+| Count     | 248 chars  | 83 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -523,6 +541,125 @@ BootstrapMethods:
 16: return
 ```
 
+### ラッパー型 (integer)
+
+#### 気づいたこと
+
+- ほぼ同じバイトコードが生成された。つまり、Kotlin はプリミティブ型の `int` を使用すべきか ラッパー型の `Integer` を使用すべきかをコンパイラが判断していた。
+- 主な Kotlin と Java のバイトコードの違いは Kotlin でのみ `Arrays.asList` の結果に対して `checkcast` 命令を実行していること。なぜ必要なのかわからない。
+- あと、全然関係ないが以下に気づいた。
+
+```kt
+// おもむろにファイル内に標準ライブラリと同名の関数を宣言するとそちらが優先される。ちょっと罠?
+// (警告を出してくれると嬉しい気がした)
+fun <T> listOf(element: T): List<T> = throw Exception("")
+
+fun main() {
+  // 絶対にここで Exception がスローされる
+  val a = listOf(1)
+}
+
+```
+
+#### 性能比較
+
+| Step      | Java       | Kotlin      |
+| --------- | ---------- | ----------- |
+| Compile   | 300.423 ms | 2476.075 ms |
+| Execution | 60.700 ms  | 61.427 ms   |
+| Count     | 209 chars  | 83 chars    |
+
+#### Java バイトコード (抜粋)
+
+```
+// 特筆事項がないので省略
+```
+
+#### Kotlin バイトコード (抜粋)
+
+```
+// 特筆事項がないので省略
+```
+
+### 拡張関数 (extensions)
+
+#### 気づいたこと
+
+- Java だと継承しなければならなかったので書きづらかった。
+- Kotlin の拡張関数は、拡張元のクラスのインスタンスを引数にとる関数としてコンパイルされる (つまり以下のシンタックスシュガー)
+
+```kt
+class InputK(val value: Int) {
+    fun doSomething() = println(value)
+}
+fun doSomethingEx(instance: InputK) = println(instance.value + 1)
+```
+
+#### 性能比較
+
+| Step      | Java       | Kotlin      |
+| --------- | ---------- | ----------- |
+| Compile   | 345.605 ms | 2462.764 ms |
+| Execution | 73.333 ms  | 65.556 ms   |
+| Chars     | 360 chars  | 178 chars   |
+
+#### Java バイトコード (抜粋)
+
+```
+// 特筆事項がないので省略
+```
+
+#### Kotlin バイトコード (抜粋)
+
+```
+public static final void doSomethingEx(InputK);
+  Code:
+       0: aload_0
+       1: ldc           #9                  // String <this>
+       3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: invokevirtual #21                 // Method InputK.getValue:()I
+      10: iconst_1
+      11: iadd
+      12: istore_1
+      13: getstatic     #27                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      16: iload_1
+      17: invokevirtual #33                 // Method java/io/PrintStream.println:(I)V
+      20: return
+```
+
+### 中置記法 (infix)
+
+#### 気づいたこと
+
+- これは完全に Java でいう以下のシンタックスシュガー
+
+```java
+public static final int plusEx(int base, int n) {
+  return base + n;
+}
+```
+
+#### 性能比較
+
+| Step      | Java       | Kotlin      |
+| --------- | ---------- | ----------- |
+| Compile   | 393.717 ms | 2545.234 ms |
+| Execution | 60.902 ms  | 63.583 ms   |
+| Count     | 136 chars  | 64 chars    |
+
+#### Java バイトコード (抜粋)
+
+```
+// 特筆事項なし
+```
+
+#### Kotlin バイトコード (抜粋)
+
+```
+// 特筆事項なし
+```
+
 ### テンプレート (template)
 
 #### 気づいたこと
@@ -536,6 +673,7 @@ BootstrapMethods:
 | --------- | ---------- | ----------- |
 | Compile   | 345.605 ms | 2462.764 ms |
 | Execution | 73.333 ms  | 65.556 ms   |
+| Count     | 209 chars  | 83 chars    |
 
 #### Java バイトコード (抜粋)
 
@@ -548,3 +686,9 @@ BootstrapMethods:
 ```
 
 ```
+
+# TODO
+
+- reified
+- coroutine
+- suspend
