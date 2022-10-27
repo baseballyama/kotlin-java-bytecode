@@ -1,0 +1,118 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/companion-object/InputK.class
+  Last modified 2022/10/27; size 805 bytes
+  SHA-256 checksum d9c5ce73e3d3b55dc515190b22d8090b269f1f1f35b5496b46196a216b302c3b
+  Compiled from "InputK.kt"
+public final class InputK
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputK
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 2
+Constant pool:
+   #1 = Utf8               InputK
+   #2 = Class              #1             // InputK
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = NameAndType        #5:#6          // "<init>":()V
+   #8 = Methodref          #4.#7          // java/lang/Object."<init>":()V
+   #9 = Utf8               this
+  #10 = Utf8               LInputK;
+  #11 = Utf8               doSomething
+  #12 = Utf8               java/lang/System
+  #13 = Class              #12            // java/lang/System
+  #14 = Utf8               out
+  #15 = Utf8               Ljava/io/PrintStream;
+  #16 = NameAndType        #14:#15        // out:Ljava/io/PrintStream;
+  #17 = Fieldref           #13.#16        // java/lang/System.out:Ljava/io/PrintStream;
+  #18 = Utf8               java/io/PrintStream
+  #19 = Class              #18            // java/io/PrintStream
+  #20 = Utf8               println
+  #21 = Utf8               (I)V
+  #22 = NameAndType        #20:#21        // println:(I)V
+  #23 = Methodref          #19.#22        // java/io/PrintStream.println:(I)V
+  #24 = Utf8               <clinit>
+  #25 = Methodref          #2.#7          // InputK."<init>":()V
+  #26 = Utf8               INSTANCE
+  #27 = NameAndType        #26:#10        // INSTANCE:LInputK;
+  #28 = Fieldref           #2.#27         // InputK.INSTANCE:LInputK;
+  #29 = Utf8               Lorg/jetbrains/annotations/NotNull;
+  #30 = Utf8               Lkotlin/Metadata;
+  #31 = Utf8               mv
+  #32 = Integer            1
+  #33 = Integer            7
+  #34 = Utf8               k
+  #35 = Utf8               xi
+  #36 = Integer            48
+  #37 = Utf8               d1
+  #38 = Utf8               \u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004
+  #39 = Utf8               d2
+  #40 = Utf8
+  #41 = Utf8               InputK.kt
+  #42 = Utf8               RuntimeInvisibleAnnotations
+  #43 = Utf8               Code
+  #44 = Utf8               LineNumberTable
+  #45 = Utf8               LocalVariableTable
+  #46 = Utf8               SourceFile
+  #47 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final InputK INSTANCE;
+    descriptor: LInputK;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    RuntimeInvisibleAnnotations:
+      0: #29()
+        org.jetbrains.annotations.NotNull
+
+  private InputK();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LInputK;
+
+  public final void doSomething();
+    descriptor: ()V
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #17                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iconst_0
+         4: invokevirtual #23                 // Method java/io/PrintStream.println:(I)V
+         7: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   LInputK;
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #2                  // class InputK
+         3: dup
+         4: invokespecial #25                 // Method "<init>":()V
+         7: putstatic     #28                 // Field INSTANCE:LInputK;
+        10: return
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #30(#31=[I#32,I#33,I#32],#34=I#32,#35=I#36,#37=[s#38],#39=[s#10,s#40,s#6,s#11,s#40])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=1
+      xi=48
+      d1=["\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004"]
+      d2=["LInputK;","","()V","doSomething",""]
+    )

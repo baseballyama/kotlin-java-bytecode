@@ -1,0 +1,193 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/lambda/InputKKt.class
+  Last modified 2022/10/27; size 1293 bytes
+  SHA-256 checksum 5a09f96895b15415fff3bdfffed3120b3af3428a838cab6f39c4c5bfdaf5a2d4
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               java/lang/Integer
+   #8 = Class              #7             // java/lang/Integer
+   #9 = Utf8               valueOf
+  #10 = Utf8               (I)Ljava/lang/Integer;
+  #11 = NameAndType        #9:#10         // valueOf:(I)Ljava/lang/Integer;
+  #12 = Methodref          #8.#11         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #13 = Utf8               java/lang/Number
+  #14 = Class              #13            // java/lang/Number
+  #15 = Utf8               intValue
+  #16 = Utf8               ()I
+  #17 = NameAndType        #15:#16        // intValue:()I
+  #18 = Methodref          #14.#17        // java/lang/Number.intValue:()I
+  #19 = Utf8               java/lang/System
+  #20 = Class              #19            // java/lang/System
+  #21 = Utf8               out
+  #22 = Utf8               Ljava/io/PrintStream;
+  #23 = NameAndType        #21:#22        // out:Ljava/io/PrintStream;
+  #24 = Fieldref           #20.#23        // java/lang/System.out:Ljava/io/PrintStream;
+  #25 = Utf8               java/io/PrintStream
+  #26 = Class              #25            // java/io/PrintStream
+  #27 = Utf8               println
+  #28 = Utf8               (I)V
+  #29 = NameAndType        #27:#28        // println:(I)V
+  #30 = Methodref          #26.#29        // java/io/PrintStream.println:(I)V
+  #31 = Utf8               $i$a$-forEach-InputKKt$main$1
+  #32 = Utf8               I
+  #33 = Utf8               p0
+  #34 = Utf8               element$iv
+  #35 = Utf8               Ljava/lang/Object;
+  #36 = Utf8               $i$f$forEach
+  #37 = Utf8               $this$forEach$iv
+  #38 = Utf8               [Ljava/lang/Object;
+  #39 = Utf8               list
+  #40 = Utf8               [Ljava/lang/Integer;
+  #41 = Class              #40            // "[Ljava/lang/Integer;"
+  #42 = Utf8               ([Ljava/lang/String;)V
+  #43 = NameAndType        #5:#6          // main:()V
+  #44 = Methodref          #2.#43         // InputKKt.main:()V
+  #45 = Utf8               args
+  #46 = Utf8               [Ljava/lang/String;
+  #47 = Utf8               Lkotlin/Metadata;
+  #48 = Utf8               mv
+  #49 = Integer            1
+  #50 = Integer            7
+  #51 = Utf8               k
+  #52 = Integer            2
+  #53 = Utf8               xi
+  #54 = Integer            48
+  #55 = Utf8               d1
+  #56 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #57 = Utf8               d2
+  #58 = Utf8
+  #59 = Utf8               InputK.kt
+  #60 = Utf8               Code
+  #61 = Utf8               StackMapTable
+  #62 = Utf8               LineNumberTable
+  #63 = Utf8               LocalVariableTable
+  #64 = Utf8               SourceFile
+  #65 = Utf8               SourceDebugExtension
+  #66 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=3, locals=8, args_size=0
+         0: iconst_2
+         1: anewarray     #8                  // class java/lang/Integer
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: iconst_1
+         8: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        11: aastore
+        12: aload_1
+        13: iconst_1
+        14: iconst_2
+        15: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        18: aastore
+        19: aload_1
+        20: astore_0
+        21: aload_0
+        22: astore_1
+        23: iconst_0
+        24: istore_2
+        25: iconst_0
+        26: istore_3
+        27: aload_1
+        28: arraylength
+        29: istore        4
+        31: iload_3
+        32: iload         4
+        34: if_icmpge     70
+        37: aload_1
+        38: iload_3
+        39: aaload
+        40: astore        5
+        42: aload         5
+        44: checkcast     #14                 // class java/lang/Number
+        47: invokevirtual #18                 // Method java/lang/Number.intValue:()I
+        50: istore        6
+        52: iconst_0
+        53: istore        7
+        55: getstatic     #24                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        58: iload         6
+        60: invokevirtual #30                 // Method java/io/PrintStream.println:(I)V
+        63: nop
+        64: iinc          3, 1
+        67: goto          31
+        70: nop
+        71: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 31
+          locals = [ class "[Ljava/lang/Integer;", class "[Ljava/lang/Integer;", int, int, int ]
+          stack = []
+        frame_type = 38 /* same */
+      LineNumberTable:
+        line 4: 0
+        line 5: 21
+        line 7: 25
+        line 5: 55
+        line 7: 63
+        line 8: 70
+        line 6: 71
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           55       8     7 $i$a$-forEach-InputKKt$main$1   I
+           52      11     6    p0   I
+           42      22     5 element$iv   Ljava/lang/Object;
+           25      46     2 $i$f$forEach   I
+           23      48     1 $this$forEach$iv   [Ljava/lang/Object;
+           21      51     0  list   [Ljava/lang/Integer;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #44                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+SourceDebugExtension:
+  SMAP
+  InputK.kt
+  Kotlin
+  *S Kotlin
+  *F
+  + 1 InputK.kt
+  InputKKt
+  + 2 _Arrays.kt
+  kotlin/collections/ArraysKt___ArraysKt
+  *L
+  1#1,6:1
+  13543#2,2:7
+  *S KotlinDebug
+  *F
+  + 1 InputK.kt
+  InputKKt
+  *L
+  5#1:7,2
+  *E
+RuntimeVisibleAnnotations:
+  0: #47(#48=[I#49,I#50,I#49],#51=I#52,#53=I#54,#55=[s#56],#57=[s#5,s#58])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

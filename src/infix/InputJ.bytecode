@@ -1,10 +1,10 @@
-Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/infix.only/InputJ.class
-  Last modified 2022/10/23; size 455 bytes
-  SHA-256 checksum 5b5478a6b4d03893491e807797d983f07b6807c2d05c5fe9cd90dd1d23e1bc73
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/infix/InputJ.class
+  Last modified 2022/10/27; size 455 bytes
+  SHA-256 checksum fb0d88eaba5d8c32917fecb8cb49ac6f1e2a95115001e78ed35f4cf5282d914f
   Compiled from "InputJ.java"
 class InputJ
   minor version: 0
-  major version: 62
+  major version: 63
   flags: (0x0020) ACC_SUPER
   this_class: #14                         // InputJ
   super_class: #2                         // java/lang/Object

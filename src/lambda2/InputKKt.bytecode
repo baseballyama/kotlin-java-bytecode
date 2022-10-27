@@ -1,0 +1,189 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/lambda2/InputKKt.class
+  Last modified 2022/10/27; size 1778 bytes
+  SHA-256 checksum b9fcf6df661b7fb5cb37fa0e9ad580644d57f8144ffb0d4b954b3eba1d4c0800
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 4
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               java/lang/Integer
+   #8 = Class              #7             // java/lang/Integer
+   #9 = Utf8               valueOf
+  #10 = Utf8               (I)Ljava/lang/Integer;
+  #11 = NameAndType        #9:#10         // valueOf:(I)Ljava/lang/Integer;
+  #12 = Methodref          #8.#11         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #13 = Utf8               java/util/Arrays
+  #14 = Class              #13            // java/util/Arrays
+  #15 = Utf8               stream
+  #16 = Utf8               ([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #17 = NameAndType        #15:#16        // stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #18 = Methodref          #14.#17        // java/util/Arrays.stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #19 = Utf8               InputKKt$main$1
+  #20 = Class              #19            // InputKKt$main$1
+  #21 = Utf8               INSTANCE
+  #22 = Utf8               LInputKKt$main$1;
+  #23 = NameAndType        #21:#22        // INSTANCE:LInputKKt$main$1;
+  #24 = Fieldref           #20.#23        // InputKKt$main$1.INSTANCE:LInputKKt$main$1;
+  #25 = Utf8               kotlin/jvm/functions/Function1
+  #26 = Class              #25            // kotlin/jvm/functions/Function1
+  #27 = Utf8               (Ljava/lang/Object;)V
+  #28 = MethodType         #27            //  (Ljava/lang/Object;)V
+  #29 = Utf8               main$lambda$0
+  #30 = Utf8               (Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+  #31 = NameAndType        #29:#30        // main$lambda$0:(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+  #32 = Methodref          #2.#31         // InputKKt.main$lambda$0:(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+  #33 = MethodHandle       6:#32          // REF_invokeStatic InputKKt.main$lambda$0:(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+  #34 = Utf8               java/lang/invoke/LambdaMetafactory
+  #35 = Class              #34            // java/lang/invoke/LambdaMetafactory
+  #36 = Utf8               metafactory
+  #37 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #38 = NameAndType        #36:#37        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #39 = Methodref          #35.#38        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #40 = MethodHandle       6:#39          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #41 = Utf8               accept
+  #42 = Utf8               (Lkotlin/jvm/functions/Function1;)Ljava/util/function/Consumer;
+  #43 = NameAndType        #41:#42        // accept:(Lkotlin/jvm/functions/Function1;)Ljava/util/function/Consumer;
+  #44 = InvokeDynamic      #0:#43         // #0:accept:(Lkotlin/jvm/functions/Function1;)Ljava/util/function/Consumer;
+  #45 = Utf8               java/util/stream/Stream
+  #46 = Class              #45            // java/util/stream/Stream
+  #47 = Utf8               forEach
+  #48 = Utf8               (Ljava/util/function/Consumer;)V
+  #49 = NameAndType        #47:#48        // forEach:(Ljava/util/function/Consumer;)V
+  #50 = InterfaceMethodref #46.#49        // java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+  #51 = Utf8               list
+  #52 = Utf8               [Ljava/lang/Integer;
+  #53 = Utf8               ([Ljava/lang/String;)V
+  #54 = NameAndType        #5:#6          // main:()V
+  #55 = Methodref          #2.#54         // InputKKt.main:()V
+  #56 = Utf8               args
+  #57 = Utf8               [Ljava/lang/String;
+  #58 = Utf8               $tmp0
+  #59 = String             #58            // $tmp0
+  #60 = Utf8               kotlin/jvm/internal/Intrinsics
+  #61 = Class              #60            // kotlin/jvm/internal/Intrinsics
+  #62 = Utf8               checkNotNullParameter
+  #63 = Utf8               (Ljava/lang/Object;Ljava/lang/String;)V
+  #64 = NameAndType        #62:#63        // checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #65 = Methodref          #61.#64        // kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #66 = Utf8               invoke
+  #67 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #68 = NameAndType        #66:#67        // invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+  #69 = InterfaceMethodref #26.#68        // kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+  #70 = Utf8               Lkotlin/jvm/functions/Function1;
+  #71 = Utf8               p0
+  #72 = Utf8               Ljava/lang/Object;
+  #73 = Utf8               Lkotlin/Metadata;
+  #74 = Utf8               mv
+  #75 = Integer            1
+  #76 = Integer            7
+  #77 = Utf8               k
+  #78 = Integer            2
+  #79 = Utf8               xi
+  #80 = Integer            48
+  #81 = Utf8               d1
+  #82 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #83 = Utf8               d2
+  #84 = Utf8
+  #85 = Utf8               InputK.kt
+  #86 = Utf8               Code
+  #87 = Utf8               LineNumberTable
+  #88 = Utf8               LocalVariableTable
+  #89 = Utf8               InnerClasses
+  #90 = Utf8               SourceFile
+  #91 = Utf8               RuntimeVisibleAnnotations
+  #92 = Utf8               BootstrapMethods
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=3, locals=2, args_size=0
+         0: iconst_2
+         1: anewarray     #8                  // class java/lang/Integer
+         4: astore_1
+         5: aload_1
+         6: iconst_0
+         7: iconst_1
+         8: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        11: aastore
+        12: aload_1
+        13: iconst_1
+        14: iconst_2
+        15: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        18: aastore
+        19: aload_1
+        20: astore_0
+        21: aload_0
+        22: invokestatic  #18                 // Method java/util/Arrays.stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+        25: getstatic     #24                 // Field InputKKt$main$1.INSTANCE:LInputKKt$main$1;
+        28: checkcast     #26                 // class kotlin/jvm/functions/Function1
+        31: invokedynamic #44,  0             // InvokeDynamic #0:accept:(Lkotlin/jvm/functions/Function1;)Ljava/util/function/Consumer;
+        36: invokeinterface #50,  2           // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+        41: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 21
+        line 6: 41
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           21      21     0  list   [Ljava/lang/Integer;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #55                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+
+  private static final void main$lambda$0(kotlin.jvm.functions.Function1, java.lang.Object);
+    descriptor: (Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: ldc           #59                 // String $tmp0
+         3: invokestatic  #65                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: aload_0
+         7: aload_1
+         8: invokeinterface #69,  2           // InterfaceMethod kotlin/jvm/functions/Function1.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+        13: pop
+        14: return
+      LineNumberTable:
+        line 5: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0 $tmp0   Lkotlin/jvm/functions/Function1;
+            0      15     1    p0   Ljava/lang/Object;
+}
+InnerClasses:
+  #20;                                    // class InputKKt$main$1
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #73(#74=[I#75,I#76,I#75],#77=I#78,#79=I#80,#81=[s#82],#83=[s#5,s#84])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )
+BootstrapMethods:
+  0: #40 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #28 (Ljava/lang/Object;)V
+      #33 REF_invokeStatic InputKKt.main$lambda$0:(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+      #28 (Ljava/lang/Object;)V

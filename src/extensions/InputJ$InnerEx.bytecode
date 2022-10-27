@@ -1,0 +1,82 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/extensions/InputJ$InnerEx.class
+  Last modified 2022/10/27; size 500 bytes
+  SHA-256 checksum 08e759d15c2c2f281247d53b6ae9c3865c1cdda9fca7a77fb36f41e072c8ddc9
+  Compiled from "InputJ.java"
+class InputJ$InnerEx extends InputJ$Inner
+  minor version: 0
+  major version: 63
+  flags: (0x0020) ACC_SUPER
+  this_class: #23                         // InputJ$InnerEx
+  super_class: #2                         // InputJ$Inner
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Methodref          #2.#3          // InputJ$Inner."<init>":(LInputJ;I)V
+   #2 = Class              #4             // InputJ$Inner
+   #3 = NameAndType        #5:#6          // "<init>":(LInputJ;I)V
+   #4 = Utf8               InputJ$Inner
+   #5 = Utf8               <init>
+   #6 = Utf8               (LInputJ;I)V
+   #7 = Fieldref           #8.#9          // java/lang/System.out:Ljava/io/PrintStream;
+   #8 = Class              #10            // java/lang/System
+   #9 = NameAndType        #11:#12        // out:Ljava/io/PrintStream;
+  #10 = Utf8               java/lang/System
+  #11 = Utf8               out
+  #12 = Utf8               Ljava/io/PrintStream;
+  #13 = Fieldref           #2.#14         // InputJ$Inner.i:I
+  #14 = NameAndType        #15:#16        // i:I
+  #15 = Utf8               i
+  #16 = Utf8               I
+  #17 = Methodref          #18.#19        // java/io/PrintStream.println:(I)V
+  #18 = Class              #20            // java/io/PrintStream
+  #19 = NameAndType        #21:#22        // println:(I)V
+  #20 = Utf8               java/io/PrintStream
+  #21 = Utf8               println
+  #22 = Utf8               (I)V
+  #23 = Class              #24            // InputJ$InnerEx
+  #24 = Utf8               InputJ$InnerEx
+  #25 = Utf8               Code
+  #26 = Utf8               LineNumberTable
+  #27 = Utf8               doSomethingEx
+  #28 = Utf8               ()V
+  #29 = Utf8               SourceFile
+  #30 = Utf8               InputJ.java
+  #31 = Utf8               NestHost
+  #32 = Class              #33            // InputJ
+  #33 = Utf8               InputJ
+  #34 = Utf8               InnerClasses
+  #35 = Utf8               Inner
+  #36 = Utf8               InnerEx
+{
+  InputJ$InnerEx(InputJ, int);
+    descriptor: (LInputJ;I)V
+    flags: (0x0000)
+    Code:
+      stack=3, locals=3, args_size=3
+         0: aload_0
+         1: aload_1
+         2: iload_2
+         3: invokespecial #1                  // Method InputJ$Inner."<init>":(LInputJ;I)V
+         6: return
+      LineNumberTable:
+        line 17: 0
+        line 18: 6
+
+  public void doSomethingEx();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: aload_0
+         4: getfield      #13                 // Field InputJ$Inner.i:I
+         7: invokevirtual #17                 // Method java/io/PrintStream.println:(I)V
+        10: return
+      LineNumberTable:
+        line 21: 0
+        line 22: 10
+}
+SourceFile: "InputJ.java"
+NestHost: class InputJ
+InnerClasses:
+  #35= #2 of #32;                         // Inner=class InputJ$Inner of class InputJ
+  #36= #23 of #32;                        // InnerEx=class InputJ$InnerEx of class InputJ

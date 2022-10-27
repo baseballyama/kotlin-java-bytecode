@@ -1,0 +1,158 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/lambda.only/InputJ.class
+  Last modified 2022/10/26; size 1310 bytes
+  SHA-256 checksum 23405c9a95a510c5974d6ab6b06862ee639b7f431b90641e0571f1afb868265d
+  Compiled from "InputJ.java"
+class InputJ
+  minor version: 0
+  major version: 63
+  flags: (0x0020) ACC_SUPER
+  this_class: #41                         // InputJ
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
+   #2 = Class              #4             // java/lang/Object
+   #3 = NameAndType        #5:#6          // "<init>":()V
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Class              #8             // java/lang/Integer
+   #8 = Utf8               java/lang/Integer
+   #9 = Methodref          #7.#10         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #10 = NameAndType        #11:#12        // valueOf:(I)Ljava/lang/Integer;
+  #11 = Utf8               valueOf
+  #12 = Utf8               (I)Ljava/lang/Integer;
+  #13 = Methodref          #14.#15        // java/util/Arrays.stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #14 = Class              #16            // java/util/Arrays
+  #15 = NameAndType        #17:#18        // stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #16 = Utf8               java/util/Arrays
+  #17 = Utf8               stream
+  #18 = Utf8               ([Ljava/lang/Object;)Ljava/util/stream/Stream;
+  #19 = Fieldref           #20.#21        // java/lang/System.out:Ljava/io/PrintStream;
+  #20 = Class              #22            // java/lang/System
+  #21 = NameAndType        #23:#24        // out:Ljava/io/PrintStream;
+  #22 = Utf8               java/lang/System
+  #23 = Utf8               out
+  #24 = Utf8               Ljava/io/PrintStream;
+  #25 = Methodref          #26.#27        // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #26 = Class              #28            // java/util/Objects
+  #27 = NameAndType        #29:#30        // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+  #28 = Utf8               java/util/Objects
+  #29 = Utf8               requireNonNull
+  #30 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #31 = InvokeDynamic      #0:#32         // #0:accept:(Ljava/io/PrintStream;)Ljava/util/function/Consumer;
+  #32 = NameAndType        #33:#34        // accept:(Ljava/io/PrintStream;)Ljava/util/function/Consumer;
+  #33 = Utf8               accept
+  #34 = Utf8               (Ljava/io/PrintStream;)Ljava/util/function/Consumer;
+  #35 = InterfaceMethodref #36.#37        // java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+  #36 = Class              #38            // java/util/stream/Stream
+  #37 = NameAndType        #39:#40        // forEach:(Ljava/util/function/Consumer;)V
+  #38 = Utf8               java/util/stream/Stream
+  #39 = Utf8               forEach
+  #40 = Utf8               (Ljava/util/function/Consumer;)V
+  #41 = Class              #42            // InputJ
+  #42 = Utf8               InputJ
+  #43 = Utf8               Code
+  #44 = Utf8               LineNumberTable
+  #45 = Utf8               main
+  #46 = Utf8               ([Ljava/lang/String;)V
+  #47 = Utf8               SourceFile
+  #48 = Utf8               InputJ.java
+  #49 = Utf8               BootstrapMethods
+  #50 = MethodHandle       6:#51          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #51 = Methodref          #52.#53        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #52 = Class              #54            // java/lang/invoke/LambdaMetafactory
+  #53 = NameAndType        #55:#56        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #54 = Utf8               java/lang/invoke/LambdaMetafactory
+  #55 = Utf8               metafactory
+  #56 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #57 = MethodType         #58            //  (Ljava/lang/Object;)V
+  #58 = Utf8               (Ljava/lang/Object;)V
+  #59 = MethodHandle       5:#60          // REF_invokeVirtual java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #60 = Methodref          #61.#62        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #61 = Class              #63            // java/io/PrintStream
+  #62 = NameAndType        #64:#58        // println:(Ljava/lang/Object;)V
+  #63 = Utf8               java/io/PrintStream
+  #64 = Utf8               println
+  #65 = MethodType         #66            //  (Ljava/lang/Integer;)V
+  #66 = Utf8               (Ljava/lang/Integer;)V
+  #67 = Utf8               InnerClasses
+  #68 = Class              #69            // java/lang/invoke/MethodHandles$Lookup
+  #69 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #70 = Class              #71            // java/lang/invoke/MethodHandles
+  #71 = Utf8               java/lang/invoke/MethodHandles
+  #72 = Utf8               Lookup
+{
+  InputJ();
+    descriptor: ()V
+    flags: (0x0000)
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: iconst_2
+         // 2
+         1: anewarray     #7                  // class java/lang/Integer
+         // 2, arrayRef
+         4: dup
+         // 2, arrayRef, arrayRef
+         5: iconst_0
+         // 2, arrayRef, arrayRef, 0
+         6: iconst_1
+         // 2, arrayRef, arrayRef, 0, 1
+         7: invokestatic  #9                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         // 2, arrayRef, arrayRef, 0, 1
+        10: aastore
+        // 2, arrayRef, arrayRef[1]
+        11: dup
+        // 2, arrayRef, arrayRef[1], arrayRef[1]
+        12: iconst_1
+        // 2, arrayRef, arrayRef[1], arrayRef[1], 1
+        13: iconst_2
+        // 2, arrayRef, arrayRef[1], arrayRef[1], 1, 2
+        14: invokestatic  #9                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        // 2, arrayRef, arrayRef[1], arrayRef[1], 1, 2
+        17: aastore
+        // 2, arrayRef, arrayRef[1, 2], arrayRef[1, 2]
+        18: astore_1
+        // 2, arrayRef, arrayRef[1, 2]   store: arrayRef[1, 2]
+        19: aload_1
+        // 2, arrayRef, arrayRef[1, 2], arrayRef[1, 2]   store: arrayRef[1, 2]
+        20: invokestatic  #13                 // Method java/util/Arrays.stream:([Ljava/lang/Object;)Ljava/util/stream/Stream;
+        // 2, arrayRef, arrayRef[1, 2], streamRef   store: arrayRef[1, 2]
+        23: getstatic     #19                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        // 2, arrayRef, arrayRef[1, 2], streamRef, printStreamRef   store: arrayRef[1, 2]
+        26: dup
+        // 2, arrayRef, arrayRef[1, 2], streamRef, printStreamRef, printStreamRef   store: arrayRef[1, 2]
+        27: invokestatic  #25                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        // 2, arrayRef, arrayRef[1, 2], streamRef, printStreamRef, printStreamRef   store: arrayRef[1, 2]
+        30: pop
+        // 2, arrayRef, arrayRef[1, 2], streamRef, printStreamRef   store: arrayRef[1, 2]
+        31: invokedynamic #31,  0             // InvokeDynamic #0:accept:(Ljava/io/PrintStream;)Ljava/util/function/Consumer;
+        // 2, arrayRef, arrayRef[1, 2], streamRef, consumerRef   store: arrayRef[1, 2]
+        36: invokeinterface #35,  2           // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+        // 2, arrayRef, arrayRef[1, 2]  store: arrayRef[1, 2]
+        41: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 19
+        line 7: 41
+}
+SourceFile: "InputJ.java"
+BootstrapMethods:
+  0: #50 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #57 (Ljava/lang/Object;)V
+      #59 REF_invokeVirtual java/io/PrintStream.println:(Ljava/lang/Object;)V
+      #65 (Ljava/lang/Integer;)V
+InnerClasses:
+  public static final #72= #68 of #70;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

@@ -1,0 +1,101 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/coroutine.only/InputKKt.class
+  Last modified 2022/10/27; size 839 bytes
+  SHA-256 checksum acaca79555083f581fd1bbc62ee9d270276b07aed2993426481bf7b8f3fbc99f
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               InputKKt$main$1
+   #8 = Class              #7             // InputKKt$main$1
+   #9 = Utf8               <init>
+  #10 = Utf8               (Lkotlin/coroutines/Continuation;)V
+  #11 = NameAndType        #9:#10         // "<init>":(Lkotlin/coroutines/Continuation;)V
+  #12 = Methodref          #8.#11         // InputKKt$main$1."<init>":(Lkotlin/coroutines/Continuation;)V
+  #13 = Utf8               kotlin/jvm/functions/Function2
+  #14 = Class              #13            // kotlin/jvm/functions/Function2
+  #15 = Utf8               kotlinx/coroutines/BuildersKt
+  #16 = Class              #15            // kotlinx/coroutines/BuildersKt
+  #17 = Utf8               runBlocking$default
+  #18 = Utf8               (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+  #19 = NameAndType        #17:#18        // runBlocking$default:(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+  #20 = Methodref          #16.#19        // kotlinx/coroutines/BuildersKt.runBlocking$default:(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+  #21 = Utf8               ([Ljava/lang/String;)V
+  #22 = NameAndType        #5:#6          // main:()V
+  #23 = Methodref          #2.#22         // InputKKt.main:()V
+  #24 = Utf8               args
+  #25 = Utf8               [Ljava/lang/String;
+  #26 = Utf8               Lkotlin/Metadata;
+  #27 = Utf8               mv
+  #28 = Integer            1
+  #29 = Integer            7
+  #30 = Utf8               k
+  #31 = Integer            2
+  #32 = Utf8               xi
+  #33 = Integer            48
+  #34 = Utf8               d1
+  #35 = Utf8               \u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0006\u0010\u0000\u001a\u00020\u0001¨\u0006\u0002
+  #36 = Utf8               d2
+  #37 = Utf8
+  #38 = Utf8               test100
+  #39 = Utf8               InputK.kt
+  #40 = Utf8               Code
+  #41 = Utf8               LineNumberTable
+  #42 = Utf8               LocalVariableTable
+  #43 = Utf8               InnerClasses
+  #44 = Utf8               SourceFile
+  #45 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=4, locals=0, args_size=0
+         0: aconst_null
+         1: new           #8                  // class InputKKt$main$1
+         4: dup
+         5: aconst_null
+         6: invokespecial #12                 // Method InputKKt$main$1."<init>":(Lkotlin/coroutines/Continuation;)V
+         9: checkcast     #14                 // class kotlin/jvm/functions/Function2
+        12: iconst_1
+        13: aconst_null
+        14: invokestatic  #20                 // Method kotlinx/coroutines/BuildersKt.runBlocking$default:(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+        17: pop
+        18: return
+      LineNumberTable:
+        line 5: 0
+        line 11: 18
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #23                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+InnerClasses:
+  static final #8;                        // class InputKKt$main$1
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #26(#27=[I#28,I#29,I#28],#30=I#31,#32=I#33,#34=[s#35],#36=[s#5,s#37,s#38])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0006\u0010\u0000\u001a\u00020\u0001¨\u0006\u0002"]
+      d2=["main","","test100"]
+    )

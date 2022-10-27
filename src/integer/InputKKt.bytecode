@@ -1,0 +1,142 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/integer/InputKKt.class
+  Last modified 2022/10/27; size 993 bytes
+  SHA-256 checksum 6865a92ba6014aab3bfd35776590869c1a363e727b540a34633ac683efca5ff2
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               java/util/ArrayList
+   #8 = Class              #7             // java/util/ArrayList
+   #9 = Utf8               java/lang/Integer
+  #10 = Class              #9             // java/lang/Integer
+  #11 = Utf8               valueOf
+  #12 = Utf8               (I)Ljava/lang/Integer;
+  #13 = NameAndType        #11:#12        // valueOf:(I)Ljava/lang/Integer;
+  #14 = Methodref          #10.#13        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #15 = Utf8               java/util/Arrays
+  #16 = Class              #15            // java/util/Arrays
+  #17 = Utf8               asList
+  #18 = Utf8               ([Ljava/lang/Object;)Ljava/util/List;
+  #19 = NameAndType        #17:#18        // asList:([Ljava/lang/Object;)Ljava/util/List;
+  #20 = Methodref          #16.#19        // java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+  #21 = Utf8               java/util/Collection
+  #22 = Class              #21            // java/util/Collection
+  #23 = Utf8               <init>
+  #24 = Utf8               (Ljava/util/Collection;)V
+  #25 = NameAndType        #23:#24        // "<init>":(Ljava/util/Collection;)V
+  #26 = Methodref          #8.#25         // java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+  #27 = Utf8               java/lang/System
+  #28 = Class              #27            // java/lang/System
+  #29 = Utf8               out
+  #30 = Utf8               Ljava/io/PrintStream;
+  #31 = NameAndType        #29:#30        // out:Ljava/io/PrintStream;
+  #32 = Fieldref           #28.#31        // java/lang/System.out:Ljava/io/PrintStream;
+  #33 = Utf8               java/io/PrintStream
+  #34 = Class              #33            // java/io/PrintStream
+  #35 = Utf8               println
+  #36 = Utf8               (I)V
+  #37 = NameAndType        #35:#36        // println:(I)V
+  #38 = Methodref          #34.#37        // java/io/PrintStream.println:(I)V
+  #39 = Utf8               (Ljava/lang/Object;)V
+  #40 = NameAndType        #35:#39        // println:(Ljava/lang/Object;)V
+  #41 = Methodref          #34.#40        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #42 = Utf8               i
+  #43 = Utf8               I
+  #44 = Utf8               j
+  #45 = Utf8               Ljava/util/ArrayList;
+  #46 = Utf8               ([Ljava/lang/String;)V
+  #47 = NameAndType        #5:#6          // main:()V
+  #48 = Methodref          #2.#47         // InputKKt.main:()V
+  #49 = Utf8               args
+  #50 = Utf8               [Ljava/lang/String;
+  #51 = Utf8               Lkotlin/Metadata;
+  #52 = Utf8               mv
+  #53 = Integer            1
+  #54 = Integer            7
+  #55 = Utf8               k
+  #56 = Integer            2
+  #57 = Utf8               xi
+  #58 = Integer            48
+  #59 = Utf8               d1
+  #60 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #61 = Utf8               d2
+  #62 = Utf8
+  #63 = Utf8               InputK.kt
+  #64 = Utf8               Code
+  #65 = Utf8               LineNumberTable
+  #66 = Utf8               LocalVariableTable
+  #67 = Utf8               SourceFile
+  #68 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=5, locals=3, args_size=0
+         0: iconst_0
+         1: istore_0
+         2: new           #8                  // class java/util/ArrayList
+         5: dup
+         6: iconst_1
+         7: anewarray     #10                 // class java/lang/Integer
+        10: astore_2
+        11: aload_2
+        12: iconst_0
+        13: iconst_1
+        14: invokestatic  #14                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        17: aastore
+        18: aload_2
+        19: invokestatic  #20                 // Method java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;
+        22: checkcast     #22                 // class java/util/Collection
+        25: invokespecial #26                 // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+        28: astore_1
+        29: getstatic     #32                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        32: iload_0
+        33: invokevirtual #38                 // Method java/io/PrintStream.println:(I)V
+        36: getstatic     #32                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        39: aload_1
+        40: invokevirtual #41                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        43: return
+      LineNumberTable:
+        line 5: 0
+        line 8: 2
+        line 9: 29
+        line 10: 36
+        line 11: 43
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            2      42     0     i   I
+           29      15     1     j   Ljava/util/ArrayList;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #48                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #51(#52=[I#53,I#54,I#53],#55=I#56,#57=I#58,#59=[s#60],#61=[s#5,s#62])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

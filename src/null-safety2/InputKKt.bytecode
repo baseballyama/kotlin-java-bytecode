@@ -1,0 +1,98 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/null-safety2/InputKKt.class
+  Last modified 2022/10/27; size 676 bytes
+  SHA-256 checksum a73d91ad9645a9eee5d69f9a99cec75d74589c50c47e0a43a38048816673a265
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               foo
+   #8 = String             #7             // foo
+   #9 = Utf8               java/lang/System
+  #10 = Class              #9             // java/lang/System
+  #11 = Utf8               out
+  #12 = Utf8               Ljava/io/PrintStream;
+  #13 = NameAndType        #11:#12        // out:Ljava/io/PrintStream;
+  #14 = Fieldref           #10.#13        // java/lang/System.out:Ljava/io/PrintStream;
+  #15 = Utf8               java/io/PrintStream
+  #16 = Class              #15            // java/io/PrintStream
+  #17 = Utf8               println
+  #18 = Utf8               (Ljava/lang/Object;)V
+  #19 = NameAndType        #17:#18        // println:(Ljava/lang/Object;)V
+  #20 = Methodref          #16.#19        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #21 = Utf8               s
+  #22 = Utf8               Ljava/lang/String;
+  #23 = Utf8               ([Ljava/lang/String;)V
+  #24 = NameAndType        #5:#6          // main:()V
+  #25 = Methodref          #2.#24         // InputKKt.main:()V
+  #26 = Utf8               args
+  #27 = Utf8               [Ljava/lang/String;
+  #28 = Utf8               Lkotlin/Metadata;
+  #29 = Utf8               mv
+  #30 = Integer            1
+  #31 = Integer            7
+  #32 = Utf8               k
+  #33 = Integer            2
+  #34 = Utf8               xi
+  #35 = Integer            48
+  #36 = Utf8               d1
+  #37 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #38 = Utf8               d2
+  #39 = Utf8
+  #40 = Utf8               InputK.kt
+  #41 = Utf8               Code
+  #42 = Utf8               LineNumberTable
+  #43 = Utf8               LocalVariableTable
+  #44 = Utf8               SourceFile
+  #45 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=0
+         0: ldc           #8                  // String foo
+         2: astore_0
+         3: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         6: aload_0
+         7: invokevirtual #20                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        10: return
+      LineNumberTable:
+        line 2: 0
+        line 3: 3
+        line 4: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3       8     0     s   Ljava/lang/String;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #25                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #28(#29=[I#30,I#31,I#30],#32=I#33,#34=I#35,#36=[s#37],#38=[s#5,s#39])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

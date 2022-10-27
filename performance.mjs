@@ -26,10 +26,16 @@ const hasOnly = !!dirs.find((dir) => dir.endsWith(".only"));
 dirs.forEach((name) => {
   if (!hasOnly || name.endsWith(".only")) {
     const dir = `${BASE_DIR}/${name}`;
-    doExec(name, "java", dir, "for i in {1..50} ; do java InputJ ; done", 50);
+    doExec(
+      name,
+      "java",
+      dir,
+      "for i in {1..50} ; do java --enable-preview InputJ ; done",
+      50
+    );
     try {
       execSync("java InputKKt", { cwd: dir, stdio: "ignore" });
-      const cmd = "for i in {1..50} ; do java InputKKt ; done";
+      const cmd = "for i in {1..50} ; do java --enable-preview InputKKt ; done";
       doExec(name, "java", dir, cmd, 50);
     } catch (e) {
       const cmd = "for i in {1..50} ; do kotlin InputKKt ; done";

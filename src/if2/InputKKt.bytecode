@@ -1,0 +1,105 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/if2/InputKKt.class
+  Last modified 2022/10/27; size 695 bytes
+  SHA-256 checksum b08fc60ce672deadc8d26b9ce1eab688d6367f8f199a639ef9cc2964f2c1542a
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Double             0.5d
+   #9 = Utf8               java/lang/Math
+  #10 = Class              #9             // java/lang/Math
+  #11 = Utf8               random
+  #12 = Utf8               ()D
+  #13 = NameAndType        #11:#12        // random:()D
+  #14 = Methodref          #10.#13        // java/lang/Math.random:()D
+  #15 = Utf8               java/lang/System
+  #16 = Class              #15            // java/lang/System
+  #17 = Utf8               out
+  #18 = Utf8               Ljava/io/PrintStream;
+  #19 = NameAndType        #17:#18        // out:Ljava/io/PrintStream;
+  #20 = Fieldref           #16.#19        // java/lang/System.out:Ljava/io/PrintStream;
+  #21 = Utf8               java/io/PrintStream
+  #22 = Class              #21            // java/io/PrintStream
+  #23 = Utf8               println
+  #24 = Utf8               (I)V
+  #25 = NameAndType        #23:#24        // println:(I)V
+  #26 = Methodref          #22.#25        // java/io/PrintStream.println:(I)V
+  #27 = Utf8               ([Ljava/lang/String;)V
+  #28 = NameAndType        #5:#6          // main:()V
+  #29 = Methodref          #2.#28         // InputKKt.main:()V
+  #30 = Utf8               args
+  #31 = Utf8               [Ljava/lang/String;
+  #32 = Utf8               Lkotlin/Metadata;
+  #33 = Utf8               mv
+  #34 = Integer            1
+  #35 = Integer            7
+  #36 = Utf8               k
+  #37 = Integer            2
+  #38 = Utf8               xi
+  #39 = Integer            48
+  #40 = Utf8               d1
+  #41 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #42 = Utf8               d2
+  #43 = Utf8
+  #44 = Utf8               InputK.kt
+  #45 = Utf8               Code
+  #46 = Utf8               StackMapTable
+  #47 = Utf8               LineNumberTable
+  #48 = Utf8               LocalVariableTable
+  #49 = Utf8               SourceFile
+  #50 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=4, locals=1, args_size=0
+         0: ldc2_w        #7                  // double 0.5d
+         3: invokestatic  #14                 // Method java/lang/Math.random:()D
+         6: dcmpl
+         7: ifle          19
+        10: iconst_0
+        11: istore_0
+        12: getstatic     #20                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        15: iload_0
+        16: invokevirtual #26                 // Method java/io/PrintStream.println:(I)V
+        19: return
+      StackMapTable: number_of_entries = 1
+        frame_type = 19 /* same */
+      LineNumberTable:
+        line 2: 0
+        line 3: 10
+        line 5: 19
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #29                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #32(#33=[I#34,I#35,I#34],#36=I#37,#38=I#39,#40=[s#41],#42=[s#5,s#43])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

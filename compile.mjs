@@ -29,11 +29,18 @@ const dirs = readdirSync(BASE_DIR).filter(
 
 const hasOnly = !!dirs.find((dir) => dir.endsWith(".only"));
 dirs.forEach((name) => {
-  if (!hasOnly || name.endsWith(".only")) {
+  if (!name.endsWith(".skip") && (!hasOnly || name.endsWith(".only"))) {
     const dir = `${BASE_DIR}/${name}`;
     readdirSync(`${BASE_DIR}/${name}`).forEach((file) => {
       if (file.endsWith(".java")) {
-        doExec(dir, `javac ${file}`, name, "java", true, appendLog);
+        doExec(
+          dir,
+          `javac --enable-preview --source 19 ${file}`,
+          name,
+          "java",
+          true,
+          appendLog
+        );
       } else if (file.endsWith(".kt")) {
         doExec(dir, `kotlinc ${file}`, name, "kt", true, appendLog);
       }

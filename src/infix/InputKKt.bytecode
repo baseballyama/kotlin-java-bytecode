@@ -1,5 +1,5 @@
-Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/infix.only/InputKKt.class
-  Last modified 2022/10/23; size 769 bytes
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/infix/InputKKt.class
+  Last modified 2022/10/27; size 769 bytes
   SHA-256 checksum 57c2521997a230b15662c248e6663da074506f9efadc73d915f04a6f70d85998
   Compiled from "InputK.kt"
 public final class InputKKt

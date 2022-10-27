@@ -1,0 +1,253 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/lambda.only/InputKKt.class
+  Last modified 2022/10/26; size 1589 bytes
+  SHA-256 checksum 500c66a989140f6323aefadf6ecc76dbcde248739a81a4c47fd95a4f0cc8b9e6
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               java/lang/Integer
+   #8 = Class              #7             // java/lang/Integer
+   #9 = Utf8               valueOf
+  #10 = Utf8               (I)Ljava/lang/Integer;
+  #11 = NameAndType        #9:#10         // valueOf:(I)Ljava/lang/Integer;
+  #12 = Methodref          #8.#11         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #13 = Utf8               kotlin/collections/CollectionsKt
+  #14 = Class              #13            // kotlin/collections/CollectionsKt
+  #15 = Utf8               listOf
+  #16 = Utf8               ([Ljava/lang/Object;)Ljava/util/List;
+  #17 = NameAndType        #15:#16        // listOf:([Ljava/lang/Object;)Ljava/util/List;
+  #18 = Methodref          #14.#17        // kotlin/collections/CollectionsKt.listOf:([Ljava/lang/Object;)Ljava/util/List;
+  #19 = Utf8               java/lang/Iterable
+  #20 = Class              #19            // java/lang/Iterable
+  #21 = Utf8               iterator
+  #22 = Utf8               ()Ljava/util/Iterator;
+  #23 = NameAndType        #21:#22        // iterator:()Ljava/util/Iterator;
+  #24 = InterfaceMethodref #20.#23        // java/lang/Iterable.iterator:()Ljava/util/Iterator;
+  #25 = Utf8               java/util/Iterator
+  #26 = Class              #25            // java/util/Iterator
+  #27 = Utf8               hasNext
+  #28 = Utf8               ()Z
+  #29 = NameAndType        #27:#28        // hasNext:()Z
+  #30 = InterfaceMethodref #26.#29        // java/util/Iterator.hasNext:()Z
+  #31 = Utf8               next
+  #32 = Utf8               ()Ljava/lang/Object;
+  #33 = NameAndType        #31:#32        // next:()Ljava/lang/Object;
+  #34 = InterfaceMethodref #26.#33        // java/util/Iterator.next:()Ljava/lang/Object;
+  #35 = Utf8               java/lang/Number
+  #36 = Class              #35            // java/lang/Number
+  #37 = Utf8               intValue
+  #38 = Utf8               ()I
+  #39 = NameAndType        #37:#38        // intValue:()I
+  #40 = Methodref          #36.#39        // java/lang/Number.intValue:()I
+  #41 = Utf8               java/lang/System
+  #42 = Class              #41            // java/lang/System
+  #43 = Utf8               out
+  #44 = Utf8               Ljava/io/PrintStream;
+  #45 = NameAndType        #43:#44        // out:Ljava/io/PrintStream;
+  #46 = Fieldref           #42.#45        // java/lang/System.out:Ljava/io/PrintStream;
+  #47 = Utf8               java/io/PrintStream
+  #48 = Class              #47            // java/io/PrintStream
+  #49 = Utf8               println
+  #50 = Utf8               (I)V
+  #51 = NameAndType        #49:#50        // println:(I)V
+  #52 = Methodref          #48.#51        // java/io/PrintStream.println:(I)V
+  #53 = Utf8               $i$a$-forEach-InputKKt$main$1
+  #54 = Utf8               I
+  #55 = Utf8               p0
+  #56 = Utf8               element$iv
+  #57 = Utf8               Ljava/lang/Object;
+  #58 = Utf8               $i$f$forEach
+  #59 = Utf8               $this$forEach$iv
+  #60 = Utf8               Ljava/lang/Iterable;
+  #61 = Utf8               list
+  #62 = Utf8               Ljava/util/List;
+  #63 = Utf8               java/util/List
+  #64 = Class              #63            // java/util/List
+  #65 = Utf8               ([Ljava/lang/String;)V
+  #66 = NameAndType        #5:#6          // main:()V
+  #67 = Methodref          #2.#66         // InputKKt.main:()V
+  #68 = Utf8               args
+  #69 = Utf8               [Ljava/lang/String;
+  #70 = Utf8               Lkotlin/Metadata;
+  #71 = Utf8               mv
+  #72 = Integer            1
+  #73 = Integer            7
+  #74 = Utf8               k
+  #75 = Integer            2
+  #76 = Utf8               xi
+  #77 = Integer            48
+  #78 = Utf8               d1
+  #79 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #80 = Utf8               d2
+  #81 = Utf8
+  #82 = Utf8               InputK.kt
+  #83 = Utf8               Code
+  #84 = Utf8               StackMapTable
+  #85 = Utf8               LineNumberTable
+  #86 = Utf8               LocalVariableTable
+  #87 = Utf8               SourceFile
+  #88 = Utf8               SourceDebugExtension
+  #89 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=3, locals=7, args_size=0
+         0: iconst_2
+         // 2
+         1: anewarray     #8                  // class java/lang/Integer
+         // arrayRef
+         4: astore_1
+         //   | store_1: arrayRef
+         5: aload_1
+         // arrayRef  | store_1: arrayRef
+         6: iconst_0
+         // arrayRef, 0  | store_1: arrayRef
+         7: iconst_1
+         // arrayRef, 0, 1  | store_1: arrayRef
+         8: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        // arrayRef, 0, 1  | store_1: arrayRef
+        11: aastore
+        //   | store_1: arrayRef[1]
+        12: aload_1
+        //  arrayRef | store_1: arrayRef[1]
+        13: iconst_1
+        //  arrayRef, 1 | store_1: arrayRef[1]
+        14: iconst_2
+        //  arrayRef, 1, 2 | store_1: arrayRef[1]
+        15: invokestatic  #12                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        //  arrayRef, 1, 2 | store_1: arrayRef[1]
+        18: aastore
+        //   | store_1: arrayRef[1, 2]
+        19: aload_1
+        // arrayRef  | store_1: arrayRef[1, 2]
+        20: invokestatic  #18                 // Method kotlin/collections/CollectionsKt.listOf:([Ljava/lang/Object;)Ljava/util/List;
+        // listRef[1, 2]  | store_1: arrayRef[1, 2]
+        23: astore_0
+        //   | store_0:listRef[1, 2], store_1: arrayRef[1, 2]
+        24: aload_0
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2]
+        25: checkcast     #20                 // class java/lang/Iterable
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2]
+        28: astore_1
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2]
+        29: iconst_0
+        // listRef, 0  | store_0:listRef[1, 2], store_1: arrayRef[1, 2]
+        30: istore_2
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0
+        31: aload_1
+        // listRef, arrayRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0
+        32: invokeinterface #24,  1           // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+        // listRef, iteRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0
+        37: astore_3
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        38: aload_3
+        // listRef, iteRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        39: invokeinterface #30,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        // listRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        44: ifeq          80
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        47: aload_3
+        // listRef, iteRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        48: invokeinterface #34,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        // listRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef
+        53: astore        4
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1
+        55: aload         4
+        // listRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1
+        57: checkcast     #36                 // class java/lang/Number
+        // listRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1
+        60: invokevirtual #40                 // Method java/lang/Number.intValue:()I
+        // listRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1
+        63: istore        5
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1
+        65: iconst_0
+        // listRef, 0  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1
+        66: istore        6
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1, store_6: 0
+        68: getstatic     #46                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        // listRef, streamRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1, store_6: 0
+        71: iload         5
+        // listRef, streamRef, 1  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1, store_6: 0
+        73: invokevirtual #52                 // Method java/io/PrintStream.println:(I)V
+        // listRef  | store_0:listRef[1, 2], store_1: arrayRef[1, 2], store_2: 0, store_3: iteRef, store_4: 1, store_5: 1, store_6: 0
+        76: nop
+        77: goto          38
+        80: nop
+        81: return
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 38
+          locals = [ class java/util/List, class java/lang/Iterable, int, class java/util/Iterator ]
+          stack = []
+        frame_type = 41 /* same */
+      LineNumberTable:
+        line 2: 0
+        line 3: 24
+        line 5: 31
+        line 3: 68
+        line 5: 76
+        line 6: 80
+        line 4: 81
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           68       8     6 $i$a$-forEach-InputKKt$main$1   I
+           65      11     5    p0   I
+           55      22     4 element$iv   Ljava/lang/Object;
+           31      50     2 $i$f$forEach   I
+           29      52     1 $this$forEach$iv   Ljava/lang/Iterable;
+           24      58     0  list   Ljava/util/List;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #67                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+SourceDebugExtension:
+  SMAP
+  InputK.kt
+  Kotlin
+  *S Kotlin
+  *F
+  + 1 InputK.kt
+  InputKKt
+  + 2 _Collections.kt
+  kotlin/collections/CollectionsKt___CollectionsKt
+  *L
+  1#1,4:1
+  1851#2,2:5
+  *S KotlinDebug
+  *F
+  + 1 InputK.kt
+  InputKKt
+  *L
+  3#1:5,2
+  *E
+RuntimeVisibleAnnotations:
+  0: #70(#71=[I#72,I#73,I#72],#74=I#75,#76=I#77,#78=[s#79],#80=[s#5,s#81])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

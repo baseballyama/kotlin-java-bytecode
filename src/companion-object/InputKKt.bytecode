@@ -1,0 +1,84 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/companion-object/InputKKt.class
+  Last modified 2022/10/27; size 553 bytes
+  SHA-256 checksum 3182ec3d3b8c24637707c37a4db29cd33d66979353dd68fd2f1b413ea263dba7
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               InputK
+   #8 = Class              #7             // InputK
+   #9 = Utf8               INSTANCE
+  #10 = Utf8               LInputK;
+  #11 = NameAndType        #9:#10         // INSTANCE:LInputK;
+  #12 = Fieldref           #8.#11         // InputK.INSTANCE:LInputK;
+  #13 = Utf8               doSomething
+  #14 = NameAndType        #13:#6         // doSomething:()V
+  #15 = Methodref          #8.#14         // InputK.doSomething:()V
+  #16 = Utf8               ([Ljava/lang/String;)V
+  #17 = NameAndType        #5:#6          // main:()V
+  #18 = Methodref          #2.#17         // InputKKt.main:()V
+  #19 = Utf8               args
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               Lkotlin/Metadata;
+  #22 = Utf8               mv
+  #23 = Integer            1
+  #24 = Integer            7
+  #25 = Utf8               k
+  #26 = Integer            2
+  #27 = Utf8               xi
+  #28 = Integer            48
+  #29 = Utf8               d1
+  #30 = Utf8               \u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001
+  #31 = Utf8               d2
+  #32 = Utf8
+  #33 = Utf8               InputK.kt
+  #34 = Utf8               Code
+  #35 = Utf8               LineNumberTable
+  #36 = Utf8               LocalVariableTable
+  #37 = Utf8               SourceFile
+  #38 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=1, locals=0, args_size=0
+         0: getstatic     #12                 // Field InputK.INSTANCE:LInputK;
+         3: invokevirtual #15                 // Method InputK.doSomething:()V
+         6: return
+      LineNumberTable:
+        line 8: 0
+        line 9: 6
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #18                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #21(#22=[I#23,I#24,I#23],#25=I#26,#27=I#28,#29=[s#30],#31=[s#5,s#32])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u001a\u0006\u0010\u0000\u001a\u00020\u0001"]
+      d2=["main",""]
+    )

@@ -1,0 +1,133 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/null-safety/InputKKt.class
+  Last modified 2022/10/27; size 1031 bytes
+  SHA-256 checksum 97ce0e4b4cbad87e018e37688f5f423ff75ebf1119e34be37d09b5b185fc00dd
+  Compiled from "InputK.kt"
+public final class InputKKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputKKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 2
+Constant pool:
+   #1 = Utf8               InputKKt
+   #2 = Class              #1             // InputKKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               doprint
+   #6 = Utf8               (Ljava/lang/String;)V
+   #7 = Utf8               Lorg/jetbrains/annotations/NotNull;
+   #8 = Utf8               s
+   #9 = String             #8             // s
+  #10 = Utf8               kotlin/jvm/internal/Intrinsics
+  #11 = Class              #10            // kotlin/jvm/internal/Intrinsics
+  #12 = Utf8               checkNotNullParameter
+  #13 = Utf8               (Ljava/lang/Object;Ljava/lang/String;)V
+  #14 = NameAndType        #12:#13        // checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #15 = Methodref          #11.#14        // kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #16 = Utf8               java/lang/System
+  #17 = Class              #16            // java/lang/System
+  #18 = Utf8               out
+  #19 = Utf8               Ljava/io/PrintStream;
+  #20 = NameAndType        #18:#19        // out:Ljava/io/PrintStream;
+  #21 = Fieldref           #17.#20        // java/lang/System.out:Ljava/io/PrintStream;
+  #22 = Utf8               java/io/PrintStream
+  #23 = Class              #22            // java/io/PrintStream
+  #24 = Utf8               println
+  #25 = Utf8               (Ljava/lang/Object;)V
+  #26 = NameAndType        #24:#25        // println:(Ljava/lang/Object;)V
+  #27 = Methodref          #23.#26        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #28 = Utf8               Ljava/lang/String;
+  #29 = Utf8               main
+  #30 = Utf8               ()V
+  #31 = Utf8               foo
+  #32 = String             #31            // foo
+  #33 = NameAndType        #5:#6          // doprint:(Ljava/lang/String;)V
+  #34 = Methodref          #2.#33         // InputKKt.doprint:(Ljava/lang/String;)V
+  #35 = Utf8               ([Ljava/lang/String;)V
+  #36 = NameAndType        #29:#30        // main:()V
+  #37 = Methodref          #2.#36         // InputKKt.main:()V
+  #38 = Utf8               args
+  #39 = Utf8               [Ljava/lang/String;
+  #40 = Utf8               Lkotlin/Metadata;
+  #41 = Utf8               mv
+  #42 = Integer            1
+  #43 = Integer            7
+  #44 = Utf8               k
+  #45 = Integer            2
+  #46 = Utf8               xi
+  #47 = Integer            48
+  #48 = Utf8               d1
+  #49 = Utf8               \u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\u001a\u000e\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003\u001a\u0006\u0010\u0004\u001a\u00020\u0001
+  #50 = Utf8               d2
+  #51 = Utf8
+  #52 = Utf8               InputK.kt
+  #53 = Utf8               Code
+  #54 = Utf8               LineNumberTable
+  #55 = Utf8               LocalVariableTable
+  #56 = Utf8               RuntimeInvisibleParameterAnnotations
+  #57 = Utf8               SourceFile
+  #58 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void doprint(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: ldc           #9                  // String s
+         3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: getstatic     #21                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: aload_0
+        10: invokevirtual #27                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        13: return
+      LineNumberTable:
+        line 1: 6
+        line 1: 13
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     0     s   Ljava/lang/String;
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #7()
+          org.jetbrains.annotations.NotNull
+
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=1, locals=1, args_size=0
+         0: ldc           #32                 // String foo
+         2: astore_0
+         3: aload_0
+         4: invokestatic  #34                 // Method doprint:(Ljava/lang/String;)V
+         7: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 3
+        line 6: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            3       5     0     s   Ljava/lang/String;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #37                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #40(#41=[I#42,I#43,I#42],#44=I#45,#46=I#47,#48=[s#49],#50=[s#5,s#51,s#8,s#51,s#29])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=2
+      xi=48
+      d1=["\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\u001a\u000e\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003\u001a\u0006\u0010\u0004\u001a\u00020\u0001"]
+      d2=["doprint","","s","","main"]
+    )

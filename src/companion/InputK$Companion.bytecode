@@ -1,0 +1,116 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/companion/InputK$Companion.class
+  Last modified 2022/10/27; size 905 bytes
+  SHA-256 checksum 6f04351308c68582f79e96075bd41c4792331bb35646f40d95a4e4ebcb342ea8
+  Compiled from "InputK.kt"
+public final class InputK$Companion
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputK$Companion
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 3
+Constant pool:
+   #1 = Utf8               InputK$Companion
+   #2 = Class              #1             // InputK$Companion
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = NameAndType        #5:#6          // "<init>":()V
+   #8 = Methodref          #4.#7          // java/lang/Object."<init>":()V
+   #9 = Utf8               this
+  #10 = Utf8               LInputK$Companion;
+  #11 = Utf8               doSomething
+  #12 = Utf8               java/lang/System
+  #13 = Class              #12            // java/lang/System
+  #14 = Utf8               out
+  #15 = Utf8               Ljava/io/PrintStream;
+  #16 = NameAndType        #14:#15        // out:Ljava/io/PrintStream;
+  #17 = Fieldref           #13.#16        // java/lang/System.out:Ljava/io/PrintStream;
+  #18 = Utf8               java/io/PrintStream
+  #19 = Class              #18            // java/io/PrintStream
+  #20 = Utf8               println
+  #21 = Utf8               (I)V
+  #22 = NameAndType        #20:#21        // println:(I)V
+  #23 = Methodref          #19.#22        // java/io/PrintStream.println:(I)V
+  #24 = Utf8               (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+  #25 = Methodref          #2.#7          // InputK$Companion."<init>":()V
+  #26 = Utf8               $constructor_marker
+  #27 = Utf8               Lkotlin/jvm/internal/DefaultConstructorMarker;
+  #28 = Utf8               Lkotlin/Metadata;
+  #29 = Utf8               mv
+  #30 = Integer            1
+  #31 = Integer            7
+  #32 = Utf8               k
+  #33 = Utf8               xi
+  #34 = Integer            48
+  #35 = Utf8               d1
+  #36 = Utf8               \u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004
+  #37 = Utf8               d2
+  #38 = Utf8
+  #39 = Utf8               InputK
+  #40 = Class              #39            // InputK
+  #41 = Utf8               Companion
+  #42 = Utf8               InputK.kt
+  #43 = Utf8               Code
+  #44 = Utf8               LineNumberTable
+  #45 = Utf8               LocalVariableTable
+  #46 = Utf8               InnerClasses
+  #47 = Utf8               SourceFile
+  #48 = Utf8               RuntimeVisibleAnnotations
+{
+  private InputK$Companion();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LInputK$Companion;
+
+  public final void doSomething();
+    descriptor: ()V
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #17                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iconst_0
+         4: invokevirtual #23                 // Method java/io/PrintStream.println:(I)V
+         7: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   LInputK$Companion;
+
+  public InputK$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    flags: (0x1001) ACC_PUBLIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=2, args_size=2
+         0: aload_0
+         1: invokespecial #25                 // Method "<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LInputK$Companion;
+            0       5     1 $constructor_marker   Lkotlin/jvm/internal/DefaultConstructorMarker;
+}
+InnerClasses:
+  public static final #41= #2 of #40;     // Companion=class InputK$Companion of class InputK
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #28(#29=[I#30,I#31,I#30],#32=I#30,#33=I#34,#35=[s#36],#37=[s#10,s#38,s#6,s#11,s#38])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=1
+      xi=48
+      d1=["\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004"]
+      d2=["LInputK$Companion;","","()V","doSomething",""]
+    )

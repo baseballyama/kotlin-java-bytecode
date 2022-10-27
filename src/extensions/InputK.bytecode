@@ -1,0 +1,124 @@
+Classfile /Users/baseballyama/Desktop/git/kotlin-java-bytecode/src/extensions/InputK.class
+  Last modified 2022/10/27; size 813 bytes
+  SHA-256 checksum 47818900e1cb1ec194c8ce85428880151ee602c3a67979c1789add1cc92d9d51
+  Compiled from "InputK.kt"
+public final class InputK
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // InputK
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 2
+Constant pool:
+   #1 = Utf8               InputK
+   #2 = Class              #1             // InputK
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               (I)V
+   #7 = Utf8               ()V
+   #8 = NameAndType        #5:#7          // "<init>":()V
+   #9 = Methodref          #4.#8          // java/lang/Object."<init>":()V
+  #10 = Utf8               value
+  #11 = Utf8               I
+  #12 = NameAndType        #10:#11        // value:I
+  #13 = Fieldref           #2.#12         // InputK.value:I
+  #14 = Utf8               this
+  #15 = Utf8               LInputK;
+  #16 = Utf8               getValue
+  #17 = Utf8               ()I
+  #18 = Utf8               doSomething
+  #19 = Utf8               java/lang/System
+  #20 = Class              #19            // java/lang/System
+  #21 = Utf8               out
+  #22 = Utf8               Ljava/io/PrintStream;
+  #23 = NameAndType        #21:#22        // out:Ljava/io/PrintStream;
+  #24 = Fieldref           #20.#23        // java/lang/System.out:Ljava/io/PrintStream;
+  #25 = Utf8               java/io/PrintStream
+  #26 = Class              #25            // java/io/PrintStream
+  #27 = Utf8               println
+  #28 = NameAndType        #27:#6         // println:(I)V
+  #29 = Methodref          #26.#28        // java/io/PrintStream.println:(I)V
+  #30 = Utf8               Lkotlin/Metadata;
+  #31 = Utf8               mv
+  #32 = Integer            1
+  #33 = Integer            7
+  #34 = Utf8               k
+  #35 = Utf8               xi
+  #36 = Integer            48
+  #37 = Utf8               d1
+  #38 = Utf8               \u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0007\u001a\u00020\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006
+  #39 = Utf8               d2
+  #40 = Utf8
+  #41 = Utf8               InputK.kt
+  #42 = Utf8               Code
+  #43 = Utf8               LineNumberTable
+  #44 = Utf8               LocalVariableTable
+  #45 = Utf8               SourceFile
+  #46 = Utf8               RuntimeVisibleAnnotations
+{
+  private final int value;
+    descriptor: I
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  public InputK(int);
+    descriptor: (I)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: invokespecial #9                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iload_1
+         6: putfield      #13                 // Field value:I
+         9: return
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   LInputK;
+            0      10     1 value   I
+
+  public final int getValue();
+    descriptor: ()I
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #13                 // Field value:I
+         4: ireturn
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LInputK;
+
+  public final void doSomething();
+    descriptor: ()V
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: getfield      #13                 // Field value:I
+         4: istore_1
+         5: getstatic     #24                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         8: iload_1
+         9: invokevirtual #29                 // Method java/io/PrintStream.println:(I)V
+        12: return
+      LineNumberTable:
+        line 2: 0
+        line 2: 12
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   LInputK;
+}
+SourceFile: "InputK.kt"
+RuntimeVisibleAnnotations:
+  0: #30(#31=[I#32,I#33,I#32],#34=I#32,#35=I#36,#37=[s#38],#39=[s#15,s#40,s#10,s#40,s#6,s#16,s#17,s#18,s#40])
+    kotlin.Metadata(
+      mv=[1,7,1]
+      k=1
+      xi=48
+      d1=["\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0007\u001a\u00020\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006"]
+      d2=["LInputK;","","value","","(I)V","getValue","()I","doSomething",""]
+    )

@@ -8,7 +8,9 @@ Kotlin と Java をバイトコードの観点で比較する
 kotlin -version
 # Kotlin version 1.7.20-release-201 (JRE 19)
 java --version
-# OpenJDK 64-Bit Server VM (build 18.0.1.1+2-6, mixed mode, sharing)
+# java 19.0.1 2022-10-18
+# Java(TM) SE Runtime Environment (build 19.0.1+10-21)
+# Java HotSpot(TM) 64-Bit Server VM (build 19.0.1+10-21, mixed mode, sharing)
 node --version
 # v18.6.0
 npx envinfo --system
@@ -59,6 +61,18 @@ node count.mjs
 - [invokedynamic の説明](https://www.oracle.com/webfolder/technetwork/jp/javamagazine/Java-ND17-MethodInvoc2.pdf)
 - src 直下のフォルダ名の末尾に `.only` を付与するとそのフォルダのみバイトコードを生成 / 性能検証することができる
 - なんか[Kotlin を Java に変換する Web サイト](https://extendsclass.com/kotlin-to-java.html)を見つけた
+
+## 全体を通して気づいたこと
+
+- ランタイム性能の面では、Kotlin が実現しているバイトコード最適化 (例: `forEach`) は多少ありつつも、Null 検査 (`checkNotNullParameter`) など Kotlin 独自のオーバーヘッドもあるので、特段言語選定の段階では大きな差はないのではないかと感じた
+  - ただし、インライン関数など、一部現在の Java では最適化しようがない部分もあるが、そのレベルで性能を追求したい場合は Rust など他の言語を採用した方が良いと思った
+- Kotlin の最大の魅力は、Java と比較して約半分の実装量で済むことと、それを実現するための標準ライブラリにあると感じた。
+
+  - これらは Java でも自前で実装すれば実現できるかもしれないが、それをする必要性は個人的には見出せない。
+
+- Kotlin の記述量は Java の半分程度になることを改めて体感した。その上で、Kotlin は Java よりも表現力が豊かと言われている気がするので、業務アプリで使用する上では Kotlin を採用する大きなポイントになると感じた。
+- 一方、Kotlin はコンパイル速度が Java よりも 7-8 倍遅い。これはなんでなんですか?実際には IntelliJ を使用するとあまり問題にならない、のような整理がされているのでしょうか?
+- なんとなくだが、Java は `dup` 命令をなどを使って、不必要に ローカル変数 を使用しない (オペランドスタックだけで済ます) ようなバイトコードになっている一方 Kotlin `astore` 命令を使用して積極的に ローカル変数 を使用しているように感じた。それが性能などにどのような影響を及ぼすのかはわからない。(Kotlin の場合は `astore` -> `aload` のような命令が散見され、一見無駄に見える)
 
 ## 比較
 
@@ -634,7 +648,15 @@ public static final void doSomethingEx(InputK);
 
 - これは完全に Java でいう以下のシンタックスシュガー
 
-```java
+```kotlin
+// Kotlin
+infix fun Int.plusEx(n: Int): Int = this + n
+
+fun main() {
+  println(1 plusEx 2)
+}
+
+// Java
 public static final int plusEx(int base, int n) {
   return base + n;
 }
@@ -642,11 +664,11 @@ public static final int plusEx(int base, int n) {
 
 #### 性能比較
 
-| Step      | Java       | Kotlin      |
-| --------- | ---------- | ----------- |
-| Compile   | 393.717 ms | 2545.234 ms |
-| Execution | 60.902 ms  | 63.583 ms   |
-| Count     | 136 chars  | 64 chars    |
+| Step      | Java       | Kotlin                      |
+| --------- | ---------- | --------------------------- |
+| Compile   | 393.717 ms | 2545.234 ms                 |
+| Execution | 60.902 ms  | 63.583 ms (kotlin コマンド) |
+| Count     | 136 chars  | 64 chars                    |
 
 #### Java バイトコード (抜粋)
 
@@ -659,6 +681,137 @@ public static final int plusEx(int base, int n) {
 ```
 // 特筆事項なし
 ```
+
+### ラムダ式 (lambda)
+
+#### 気づいたこと
+
+- Java は `java/util/stream/Stream` を使用してループ処理を実現していた
+- Kotlin は、`java/util/Iterator` を使用してループ処理を実現していた
+
+```kt
+// JavaのバイトコードをKotlinでそれっぽく書くとこう
+fun main() {
+  val list = listOf(1,2)
+  Arrays.stream(list).forEach(::println)
+}
+```
+
+#### 性能比較
+
+| Step      | Java       | Kotlin                       |
+| --------- | ---------- | ---------------------------- |
+| Compile   | 379.398 ms | 2758.349 ms                  |
+| Execution | 67.188 ms  | 133.543 ms (kotlin コマンド) |
+| Count     | 153 chars  | 86 chars                     |
+
+### ラムダ式 2 (lambda2)
+
+では、上の `Stream` を使ったコードで再度比較してみた。
+
+#### 気づいたこと
+
+- `println` 以外はほとんど同じになった
+
+#### 性能比較
+
+| Step      | Java       | Kotlin      |
+| --------- | ---------- | ----------- |
+| Compile   | 345.605 ms | 2462.764 ms |
+| Execution | 73.333 ms  | 65.556 ms   |
+| Count     | 209 chars  | 83 chars    |
+
+### reified (reified)
+
+等価なコードを書くことができなかった。
+
+#### 気づいたこと
+
+- Kotlin のコードの `T::class.functions` がめちゃくちゃ遅かった。`functions` の部分が遅かった。
+- その他に特筆すべき点はなかった。 `reified` が必要な理由がイマイチわからなかったが、Java との相互運用性の観点で必要らしい??
+
+#### 性能比較
+
+| Step      | Java       | Kotlin                       |
+| --------- | ---------- | ---------------------------- |
+| Compile   | 386.515 ms | 2712.356 ms                  |
+| Execution | 68.813 ms  | 502.138 ms (kotlin コマンド) |
+| Count     | 313 chars  | 153 chars                    |
+
+### ジェネリクス (generics)
+
+#### 気づいたこと
+
+- 特に違いはなかった
+
+#### 性能比較
+
+| Step      | Java       | Kotlin                       |
+| --------- | ---------- | ---------------------------- |
+| Compile   | 325.439 ms | 2582.832 ms                  |
+| Execution | 65.627 ms  | 142.800 ms (kotlin コマンド) |
+| Count     | 179 chars  | 86 chars                     |
+
+### Null 安全その 1 (null-safety)
+
+#### 気づいたこと
+
+- Kotlin は、Null 安全を確認するために `doprint` 関数内で `kotlin/jvm/internal/Intrinsics.checkNotNullParameter` を呼び出していた。
+- でも、非 Null フィールド全部に対して呼び出していたら効率悪そう -> 次の調査へ
+
+#### 性能比較
+
+| Step      | Java       | Kotlin                       |
+| --------- | ---------- | ---------------------------- |
+| Compile   | 320.559 ms | 2400.278 ms                  |
+| Execution | 66.266 ms  | 134.023 ms (kotlin コマンド) |
+| Count     | 145 chars  | 62 chars                     |
+
+### Null 安全その 2 (null-safety)
+
+#### 気づいたこと
+
+- Java と Kotlin で全く同じ命令になった!
+- Kotlin の非 Null チェックが不要な場合は多少最適化されるのだろうか
+  - (だとしても上の場合も非 Null しかあり得ないので最適化しても良い気がした)
+
+#### 性能比較
+
+| Step      | Java       | Kotlin      |
+| --------- | ---------- | ----------- |
+| Compile   | 360.626 ms | 2414.449 ms |
+| Execution | 62.508 ms  | 67.847 ms   |
+| Count     | 106 chars  | 31 chars    |
+
+### コルーチン (coroutine)
+
+Java19 でプレビュー機能として入った バーチャルスレッド と コルーチン を比較してみた。
+
+#### 気づいたこと
+
+- バイトコードを見ても Kotlin は Kotlinx を呼び出しているし
+- Kotlin のコルーチンはイベントループモデルを採用しているらしいということを知った
+
+- [スレッドと仮想スレッドのパフォーマンス](https://inside.java/2020/08/07/loom-performance/)
+- [Java と Kotlin の違い](https://www.baeldung.com/kotlin/java-kotlin-lightweight-concurrency#how_are_java_virtual_threads_different_than_kotlin_coroutines)
+- [スタックレス / スタックフルコルーチン](https://qiita.com/hayao0727/items/5ae697fca2d6841709a2)
+  - 要はスタックフルだとどこでも yield (中断) ができる。スタックレスだとできる場所が制限される。
+  - Kotlin はスタックレス、Java はスタックフル。スタックレスの方が性能は良いらしい。
+- [スケジューリング](https://zenn.dev/akatsuki/articles/85dad95a835b0a)
+  - Kotlin は協調スケジューリング、Java は先取り (プリエんティブ) スケジューリングを採用している。
+  - 今どきのスケジューラーは先取りスケジューラーがほとんどらしいが、先取りスケジューラーは協調スケジューリングよりも実装が複雑。
+  - 先取りスケジューラーは任意の時点で中断できる必要があるので、つまりスタックフルである必要があるらしい。
+  - Kotlin はそんなせせこましいタスク管理をするよりもオーバーヘッドの少なさが大事であると判断して今の実装を選択したのだろうか?
+
+#### 性能比較
+
+Kotlin は `kotlinx` が必要だったが、このプロジェクトは特段 gradle プロジェクトなどではないので、ベンチの取得は省略した。
+
+| Step      | Java      | Kotlin    |
+| --------- | --------- | --------- |
+| Compile   | - ms      | - ms      |
+| Execution | - ms      | - ms      |
+| Count     | 315 chars | 173 chars |
 
 ### テンプレート (template)
 
@@ -675,20 +828,7 @@ public static final int plusEx(int base, int n) {
 | Execution | 73.333 ms  | 65.556 ms   |
 | Count     | 209 chars  | 83 chars    |
 
-#### Java バイトコード (抜粋)
-
-```
-
-```
-
-#### Kotlin バイトコード (抜粋)
-
-```
-
-```
-
 # TODO
 
-- reified
-- coroutine
 - suspend
+- sealed
