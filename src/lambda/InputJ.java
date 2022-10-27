@@ -1,8 +1,9 @@
 import java.util.Arrays;
+import java.util.List;
 
 class InputJ {
   public static void main(String[] args) {
-    Integer[] list = new Integer[]{1, 2};
-    Arrays.stream(list).forEach(System.out::println);
+    List<Integer> list = Arrays.asList(1, 2);
+    list.forEach(System.out::println);
   }
 }

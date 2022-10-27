@@ -2,6 +2,15 @@
 
 Kotlin と Java をバイトコードの観点で比較する
 
+## 注意
+
+これのリポジトリは作業メモなので、中途半端になっている情報が複数あります。
+なんとなく参考程度にしつつ自分でバイトコードを読んで分析頂くことを推奨致します。
+
+## 発表資料
+
+https://docs.google.com/presentation/d/14fnLhzA1Ya7RiHlUtKihXR5SlYPYlqZYd69GRK9JQD4/edit?usp=sharing
+
 ## 環境
 
 ```sh
