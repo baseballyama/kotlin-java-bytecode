@@ -687,7 +687,7 @@ public static final int plusEx(int base, int n) {
 #### 気づいたこと
 
 - Java は `java/util/stream/Stream` を使用してループ処理を実現していた
-- Kotlin は、`java/util/Iterator` を使用してループ処理を実現していた
+- Kotlin は、インラインで goto を使用してループ処理を実現していた
 
 ```kt
 // JavaのバイトコードをKotlinでそれっぽく書くとこう
